@@ -9,14 +9,14 @@ def user_input_is_valid(list_argv):
         user_input_is_valid = False
     return user_input_is_valid
 
-def encrypted(text):
+def encrypted(text, rott):
     """
     take text and rotate letters across alphabet_position
     """
     secret = ""
     for i in range(len(text)):
         if text[i].isalpha():
-            secret = secret + rotate_character(text[i], 13)
+            secret = secret + rotate_character(text[i], rott)
         else:
             secret = secret + text[i]
     return secret
